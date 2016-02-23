@@ -1,4 +1,4 @@
-set ts=4 sw=4 expandtab autoindent backupcopy=yes
+set ts=4 sw=4 expandtab autoindent
 syntax enable
 set background=dark
 
@@ -20,3 +20,6 @@ autocmd BufRead,BufNewFile *.sql set filetype=sql ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.html.erb set filetype=html ts=2 sw=2 expandtab
 
 filetype plugin on
+
+" Show trailing whitepace and spaces before a tab:
+:autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
