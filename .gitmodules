@@ -1,0 +1,3 @@
+[submodule "ssh-find-agent"]
+	path = ssh-find-agent
+	url = git@github.com:wwalker/ssh-find-agent.git
