@@ -33,7 +33,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-set background=light
+set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 
