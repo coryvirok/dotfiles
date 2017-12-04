@@ -10,6 +10,16 @@ ln -svf $PWD/.vimrc ~/.vimrc
 [ -f ~/.vim ] && rsync -ahb ~/.tmux.conf ~/.tmux.conf.bak
 ln -svf $PWD/.tmux.conf ~/.tmux.conf
 
+ADD_BASH_ALIASES='[ -f ~/.bash_aliases ] && . ~/.bash_aliases'
+if [ -f ~/.bash_aliases ]; then
+  rsync -ahb ~/.bash_aliases ~/.bash_aliases.bak
+fi
+ln -svf $PWD/.bash_aliases ~/.bash_aliases
+grep -q "$ADD_BASH_ALIASES" ~/.bashrc || (echo "$ADD_BASH_ALIASES" >> ~/.bashrc)
+
+ADD_BASH_RC='[ -f ~/.bashrc ] && . ~/.bashrc'
+grep -q "$ADD_BASH_RC" ~/.bash_profile || (echo "$ADD_BASH_RC" >> ~/.bash_profile)
+
 cp ./ssh-find-agent/ssh-find-agent.sh ~/.ssh-find-agent.sh
 
 FIND_AGENT_CMD='. ./.ssh-find-agent.sh'

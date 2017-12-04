@@ -50,6 +50,7 @@ autocmd BufRead,BufNewFile *.coffee setl foldmethod=indent nofoldenable
 autocmd BufRead,BufNewFile *.coffee setl sw=2 expandtab
 autocmd BufRead,BufNewFile *.sql set filetype=sql ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.html.erb set filetype=html ts=2 sw=2 expandtab
+autocmd BufRead,BufNewFile *.yml set filetype=yaml ts=2 sw=2 expandtab
 
 filetype plugin on
 
