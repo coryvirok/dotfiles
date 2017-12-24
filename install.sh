@@ -38,5 +38,6 @@ if ! ssh-add -l > /dev/null; then
   ssh-add
 fi
 END)
+
   echo "$ONE_AGENT_TO_RULE_THEM_ALL" >> ~/.bashrc
 fi
