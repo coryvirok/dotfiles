@@ -1,4 +1,5 @@
 #! /bin/bash
+touch ~/.bash_profile ~/.bashrc
 
 [ -d ~/.vim ] && rsync -ahb ~/.vim/ ~/.vim.bak
 rm -rf ~/.vim
@@ -20,6 +21,7 @@ grep -q "$ADD_BASH_ALIASES" ~/.bashrc || (echo "$ADD_BASH_ALIASES" >> ~/.bashrc)
 ADD_BASH_RC='[ -f ~/.bashrc ] && . ~/.bashrc'
 grep -q "$ADD_BASH_RC" ~/.bash_profile || (echo "$ADD_BASH_RC" >> ~/.bash_profile)
 
+git submodule update --init
 cp ./ssh-find-agent/ssh-find-agent.sh ~/.ssh-find-agent.sh
 
 FIND_AGENT_CMD='. ./.ssh-find-agent.sh'
