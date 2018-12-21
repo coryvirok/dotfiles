@@ -1,12 +1,12 @@
 #! /bin/bash
 touch ~/.bash_profile ~/.bashrc
 
-[ -d ~/.vim ] && rsync -ahb ~/.vim/ ~/.vim.bak
-rm -rf ~/.vim
-ln -svf $PWD/.vim ~/.vim
-
-[ -f ~/.vim ] && rsync -ahb ~/.vimrc ~/.vimrc.bak
-ln -svf $PWD/.vimrc ~/.vimrc
+brew install neovim
+export XDG_CONFIG_HOME=~/.config
+mkdir -p $XDG_CONFIG_HOME/nvim
+curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=javascript&langs=php&langs=html&langs=ruby&langs=python&langs=golang&langs=rust&editor=nvim' > $XDG_CONFIG_HOME/nvim/init.vim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+nvim +PlugInstall +qall
 
 [ -f ~/.vim ] && rsync -ahb ~/.tmux.conf ~/.tmux.conf.bak
 ln -svf $PWD/.tmux.conf ~/.tmux.conf
