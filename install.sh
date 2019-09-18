@@ -170,7 +170,7 @@ if ! grep "$FIND_AGENT_CMD" ~/.bashrc > /dev/null; then
 # Added by https://github.com/coryvirok/dotfiles/blob/master/install.sh
 # Looks for a running ssh-agent to add SSH keys to or starts up a new
 # one.
-. ./.ssh-find-agent.sh
+. ~/.ssh-find-agent.sh
 set_ssh_agent_socket
 if ! ssh-add -l > /dev/null; then
   echo 'Adding your SSH keys to SSH agent for the first and last time'
