@@ -120,6 +120,9 @@ npm install marked -g
 
 echo "Configuring OSX..."
 
+# Disable press and hold
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Set fast key repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 
