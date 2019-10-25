@@ -50,10 +50,12 @@ brew install bash
 
 PACKAGES=(
     ack
+    ansible
     autoconf
     automake
     git
     jq
+    mysql
     npm
     pkg-config
     python
@@ -80,6 +82,7 @@ brew tap homebrew/cask-versions
 
 CASKS=(
     1password
+    docker
     dropbox
     google-chrome-beta
     iterm2
@@ -117,6 +120,9 @@ sudo gem install ${RUBY_GEMS[@]}
 
 echo "Installing global npm packages..."
 npm install marked -g
+
+echo "Installing Rust..."
+curl https://sh.rustup.rs -sSf | sh
 
 echo "Configuring OSX..."
 
