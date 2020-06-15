@@ -54,6 +54,7 @@ PACKAGES=(
     autoconf
     automake
     git
+    gpg
     jq
     mysql
     npm
