@@ -56,12 +56,15 @@ PACKAGES=(
     git
     gpg
     jq
+    kubectl
+    kustomize
     mysql
     npm
     pkg-config
     python
     python3
     rename
+    sops
     ssh-copy-id
     the_silver_searcher
     tmux
@@ -86,8 +89,8 @@ CASKS=(
     docker
     dropbox
     google-chrome-beta
+    google-cloud-sdk
     iterm2
-    macvim
     pycharm
     slack
     spectacle
